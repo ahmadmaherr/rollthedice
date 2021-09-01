@@ -63,3 +63,64 @@ $("a").click(function(){
   audio.play();
   started = true;
 });
+
+$(".logo").click(function(){
+  if(!started){
+  $("a").removeClass("btn-outline-light");
+  $("body").removeClass("back1");}
+  var number1 = Math.floor(Math.random()*6) +1;
+  var number2 = Math.floor(Math.random()*6) +1;
+  var sum = number1 + number2;
+  var average = Math.floor(sum/2) -1;
+  $("body").removeClass("back" + prevColor);
+  $("body").addClass("back" + average);
+  $("a").removeClass(classes[previous]);
+  $("a").addClass(classes[average]);
+  previous = average;
+  prevColor = average;
+
+  var number3 = Math.floor(Math.random()*6) +1;
+  var number4 = Math.floor(Math.random()*6) +1;
+  var number5 = Math.floor(Math.random()*6) +1;
+  var number6 = Math.floor(Math.random()*6) +1;
+  var number7 = Math.floor(Math.random()*6) +1;
+  setTimeout(function(){$(".col1").attr("src", "dice" + number2 + ".png");
+  $(".col2").attr("src", "dice" + number3 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number3 + ".png");
+  $(".col2").attr("src", "dice" + number4 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number4 + ".png");
+  $(".col2").attr("src", "dice" + number5 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number5 + ".png");
+  $(".col2").attr("src", "dice" + number6 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number6 + ".png");
+  $(".col2").attr("src", "dice" + number7 + ".png"); }, 90);
+  setTimeout(function(){$(".col1").attr("src", "dice" + number2 + ".png");
+  $(".col2").attr("src", "dice" + number3 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number3 + ".png");
+  $(".col2").attr("src", "dice" + number4 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number4 + ".png");
+  $(".col2").attr("src", "dice" + number5 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number5 + ".png");
+  $(".col2").attr("src", "dice" + number6 + ".png"); }, 90);
+  setTimeout(function(){$(".col1").attr("src", "dice" + number2 + ".png");
+  $(".col2").attr("src", "dice" + number3 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number3 + ".png");
+  $(".col2").attr("src", "dice" + number4 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number4 + ".png");
+  $(".col2").attr("src", "dice" + number5 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number5 + ".png");
+  $(".col2").attr("src", "dice" + number6 + ".png"); }, 200);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number3 + ".png");
+  $(".col2").attr("src", "dice" + number4 + ".png"); }, 200);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number4 + ".png");
+  $(".col2").attr("src", "dice" + number5 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number5 + ".png");
+  $(".col2").attr("src", "dice" + number6 + ".png"); }, 90);
+  setTimeout(function(){ $(".col1").attr("src", "dice" + number6 + ".png");
+  $(".col2").attr("src", "dice" + number7 + ".png"); }, 90);
+  $(".col1").attr("src", "dice" + number1 + ".png");
+  $(".col2").attr("src", "dice" + number2 + ".png");
+  var audio = new Audio('roll.wav');
+  audio.play();
+  started = true;
+});
